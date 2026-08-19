@@ -1,6 +1,6 @@
 # Freqdiag
 
-`freqdiag.py` is a command-line diagnostic tool for analysing Fourier frequency lists and comparing their observed patterns with those expected from **linear beating, periodic modulation, and nonlinear quadratic coupling**.
+`freqdiag.py` is a command-line diagnostic tool for analysing Fourier frequency lists and comparing their observed patterns with those expected from **linear beating, modulation, and nonlinear coupling**.
 
 The program is intended primarily for the analysis of pulsating stars with close secondary frequencies or multiplet structures, such as RR Lyrae and high-amplitude Delta Scuti (HADS) stars.
 
