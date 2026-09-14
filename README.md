@@ -369,6 +369,7 @@ python freqdiag.py V1127_Aql.txt \
 
 If you use `freqdiag` in scientific work, please cite the paper describing the diagnostic method.
 
+Benkő J. M. and Plachy E.: Beating and coupling in pulsating stars: a unified Fourier description and observational diagnostics, Astronomy and Astrophysics (submitted)
 Full citation information will be added after acceptance/publication of the accompanying paper.
 
 ## License
