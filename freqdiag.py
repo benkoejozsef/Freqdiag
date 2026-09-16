@@ -48,7 +48,7 @@ from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tupl
 import numpy as np
 import pandas as pd
 
-__version__ = "freqdiag-2026-08-15-track-no-common-unique-f0"
+__version__ = "freqdiag-1.0.0-rc2"
 
 TWOPI = 2.0 * np.pi
 
