@@ -48,7 +48,7 @@ from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tupl
 import numpy as np
 import pandas as pd
 
-__version__ = "freqdiag-1.0.0-rc1"
+__version__ = "freqdiag-2026-08-15-track-no-common-unique-f0"
 
 TWOPI = 2.0 * np.pi
 
@@ -3323,6 +3323,10 @@ def score_models_for_candidate(
     if linear_global_gated:
         lin_s_score = min(lin_s_score, linear_gate_cap)
         lin_s_negative += max(0, linear_global_side_peaks - linear_max_side_peaks)
+
+    if cand.representative_frequency is None:
+       lin_s_score = 0.0
+
     rows.append({
         "candidate_id": cand.candidate_id, "fB_abs": cand.fB_abs,
         "model_group": "linear_beating", "model": "linear_beating_sinusoidal_secondary",
@@ -3333,6 +3337,7 @@ def score_models_for_candidate(
         "diagnostic": "single close frequency only" + linear_gate_note,
         "comment": "Only f' belongs to this model. Harmonics of f', low fB terms, or a broad equidistant grid tied to the same fB disfavor it as a complete explanation." + linear_gate_comment,
     })
+
 
     # Linear non-sinusoidal secondary.
     lin_ns_score = 0.0
