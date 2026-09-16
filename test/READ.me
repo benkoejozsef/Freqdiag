@@ -33,3 +33,13 @@ Typical run:
  --freq-col 1   --amp-col 2   --phase-col 3   --phase-unit rad \
  --baseline 90   --nmax 20  \
  --lmax-modulation 3   --lmax-coupling 3   --outdir "diag_"NAME
+
+\mod_syth      <- frequency lists of artificial modulated (AM, FM, and AM+FM) light curves 
+                  of Benko et al. (2011, MNRAS 417, 974)  
+
+Typical run:
+./freqdiag.py NAME   --separator whitespace  \
+ --no-header --skiprows 5  --fb "0.05, -0.05" --no-auto-fb \
+ --freq-col 2   --amp-col 4  --phase-col 6   --phase-convention cosine --phase-unit cycles \
+ --baseline 100   --nmax 20  \
+ --lmax-modulation 3   --lmax-coupling 3   --outdir "diag_"NAME
